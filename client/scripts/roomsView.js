@@ -6,18 +6,18 @@ var RoomsView = {
   initialize: function(successCB, errorCB = null) {
     //GET the rooms listed from the PARSE server
     
-    $.ajax({
-    url: Parse.server,
-    type: 'GET',
-    data: { order: '-createdAt' }, //check this
-    contentType: 'application/json',
-    success: successCB || function (data) {
-        console.log('chatterbox: Correct rooms received!');
-      },
-    error: errorCB || function(data) {
-      console.error('chatterbox: Failed to fetch list of rooms', data)
-      }
-    })
+    // $.ajax({
+    // url: Parse.server,
+    // type: 'GET',
+    // data: { roomname: '-createdAt' }, //check this
+    // contentType: 'application/json',
+    // success: successCB || function (data) {
+    //     console.log('chatterbox: Correct rooms received!');
+    //   },
+    // error: errorCB || function(data) {
+    //   console.error('chatterbox: Failed to fetch list of rooms', data)
+    //   }
+    // })
     
   },
 

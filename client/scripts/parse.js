@@ -4,7 +4,18 @@ var Parse = {
 
   create: function(message, successCB, errorCB = null) {
 
-
+    $.ajax({
+      url: Parse.server,
+      type: 'POST',
+      data: JSON.stringify(message),
+      contentType: 'application/json',
+      success: function (data) {
+        console.log('chatterbox: Message sent');
+      },
+      error: function (data) {
+        console.error('chatterbox: Failed to send message', data);
+      }
+    });
     //Try a test with JQuery version of Ajax post
     //$.post(server, [message], [success fn], [datatype written as string i.e. 'object'])
 
