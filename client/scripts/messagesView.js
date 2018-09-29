@@ -40,7 +40,7 @@ _.template - Template is a handy way to inject an html template
       var $message = messageCollection.render(message);
       //now we need to append this to DOM
       MessagesView.$chats.append($message)
-    }
+    });
   },
   
 

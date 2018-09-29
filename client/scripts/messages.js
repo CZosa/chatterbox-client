@@ -4,7 +4,9 @@
 */
 var Messages = {
     //WE'll use this array to collect data.results from the server
-    messageCollection = [],
+
+    //use : instead of = because it's a key value pair (THIS IS AN OBJECT)
+    messageCollection: [],
 
     add: function(message, callback) {
         Messages.messageCollection[message.objectId] = message;
@@ -18,3 +20,6 @@ var Messages = {
     callback()
     }
 }
+
+
+//Need to use _conform to make sure messages match our format (may have been accomplished by for loop earlier)

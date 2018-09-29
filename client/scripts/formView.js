@@ -15,18 +15,19 @@ var FormView = {
       text: FormView.$form.find('#message').val(),
       username: App.username
     };
+
     //need to parse above message
-    Parse.create(message, () => {
+    Parse.create(message, (data) => {
       Message.add(message);
       MessagesView.render;
-
-    console.log('click!');
-  },
+    });
+    },
 
   setStatus: function(active) {
     var status = active ? 'true' : null;
     FormView.$form.find('input[type=submit]').attr('disabled', status);
   }
-}
-
 };
+
+/*  
+  */
