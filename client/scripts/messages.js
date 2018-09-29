@@ -4,8 +4,5 @@
 */
 var Messages = {
 
-  App.username = username;
-  this.text = $('#message').text();
-  this.roomname = roomname;
 
-};
+}

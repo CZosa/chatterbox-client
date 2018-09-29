@@ -5,12 +5,12 @@ var MessagesView = {
   
   $chats: $('#chats'),
 
-  initialize: function(successCB, errorCB = null) {
+  initialize: function(message, successCB, errorCB = null) {
     //GET - requests specific data
     $.ajax({
     url: Parse.server,
     type: 'GET',
-    data: { order: '-createdAt' }, //check this
+    data: JSON.stringify(message), //check this
     contentType: 'application/json',
     success: successCB || function (data) {
         console.log('chatterbox: Messages received!');
@@ -22,9 +22,9 @@ var MessagesView = {
 
   },
 
-  render: function(message) {
+  renderMessage: function(message) {
     var textBox = $('<div class = "chat-box"></div>')
-      $('#message').appendTo(textBox);
-      $(textBox).appendTo('#chats');
+      
+    $(textBox).appendTo('#chats');
   }
 };

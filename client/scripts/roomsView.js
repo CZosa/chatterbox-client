@@ -21,7 +21,7 @@ var RoomsView = {
     
   },
 
-  renderRoom: function(room) {
+  renderRoom: function() {
     
     var newRoom = $('<div class = "new-room"></div>')
     //need something to add to div to be added to #rooms select
