@@ -22,7 +22,7 @@ var MessagesView = {
 
   },
 
-  renderMessage: function(message) {
+  render: function(message) {
     var textBox = $('<div class = "chat-box"></div>')
       $('#message').appendTo(textBox);
       $(textBox).appendTo('#chats');
