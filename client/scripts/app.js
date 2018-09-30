@@ -63,14 +63,15 @@ MessagesView.render -
       Messages.messageCollection = data.results;
       // console.log(data);
       // console.log(Messages.messageCollection);
-      for (var i = 0; i < Messages.messageCollection.length; i++) {
-        if (!Messages.messageCollection[i].username || !Messages.messageCollection[i].roomname || Messages.messageCollection[i].text === undefined) {
-          continue;
-      } 
-        var userMessage = MessagesView.render(message);
-        console.log(userMessage);
-        $('#chats').prepend(Messages.messageCollection[i])
-      }
+      // for (var i = 0; i < Messages.messageCollection.length; i++) {
+      //   if (!Messages.messageCollection[i].username || !Messages.messageCollection[i].roomname || Messages.messageCollection[i].text === undefined) {
+      //     continue;
+      // } 
+      //   var userMessage = MessagesView.render(message);
+      //   console.log(userMessage);
+      //   $('#chats').prepend(Messages.messageCollection[i])
+      // }
+      
 
  
  
