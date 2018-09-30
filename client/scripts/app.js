@@ -63,13 +63,17 @@ MessagesView.render -
       Messages.messageCollection = data.results;
       // console.log(data);
       // console.log(Messages.messageCollection);
-      // var arr = [];
-      // for (var key in data.results) {
-      //   if (data.results[key] === 'roomname') {
-      //     arr.push(data.results[key])
-      //   }
-      // }
-      // console.log(arr);
+      for (var i = 0; i < Messages.messageCollection.length; i++) {
+        if (!Messages.messageCollection[i].username || !Messages.messageCollection[i].roomname || Messages.messageCollection[i].text === undefined) {
+          continue;
+      } 
+        var userMessage = MessagesView.render(message);
+        console.log(userMessage);
+        $('#chats').prepend(Messages.messageCollection[i])
+      }
+
+ 
+ 
       callback();
     });
   },
