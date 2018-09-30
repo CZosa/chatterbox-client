@@ -11,7 +11,7 @@ var FormView = {
     event.preventDefault();
     
     var message = {
-      room: 'lobby',
+      roomname: 'lobby', //Rooms.selected
       text: FormView.$form.find('#message').val(),
       username: App.username
     };

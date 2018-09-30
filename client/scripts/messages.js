@@ -7,9 +7,11 @@ var Messages = {
 
     //use : instead of = because it's a key value pair (THIS IS AN OBJECT)
     messageCollection: [],
+    
 
     add: function(message, callback) {
         Messages.messageCollection[message.objectId] = message;
+        console.log(messageCollection)
         callback();
     },
 

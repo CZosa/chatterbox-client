@@ -4,7 +4,7 @@ var App = {
 
   // url: 'http://parse.sfm6.hackreactor.com/chatterbox/classes/messages',
   username: 'anonymous',
-  // roomname: 'lobby',
+  roomname: 'lobby',
   // friends: {},
 
 
@@ -54,13 +54,15 @@ Messages.update(data.results)
 MessagesView.render -
 
 */
+
+//Consider looping through messages array here and prepending to DOM
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
       // examine the response from the server request:
       //We set from the Messages file the messagecollection array to equal data.results
       Messages.messageCollection = data.results;
-      console.log(data);
-      console.log(data.results);
+      // console.log(data);
+      // console.log(Messages.messageCollection);
       // var arr = [];
       // for (var key in data.results) {
       //   if (data.results[key] === 'roomname') {
