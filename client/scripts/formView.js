@@ -18,7 +18,7 @@ var FormView = {
 
     //need to parse above message
     Parse.create(message, (data) => {
-      Message.add(message);
+      Messages.add(message);
       MessagesView.render;
     });
     },
